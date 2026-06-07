@@ -1,0 +1,174 @@
+/* Custom styles for ProfileHub - Rich Aesthetics */
+
+:root {
+    --primary-font: 'Inter', sans-serif;
+    --heading-font: 'Outfit', sans-serif;
+    
+    /* Harmonious Theme Colors */
+    --primary-color: #0d6efd;
+    --info-color: #0dcaf0;
+    --dark-bg: #1a1e21;
+    --soft-bg: #f8f9fa;
+    --card-shadow: 0 10px 30px rgba(0, 0, 0, 0.04);
+    --hover-shadow: 0 15px 35px rgba(13, 202, 240, 0.15);
+    --border-radius-sm: 8px;
+    --border-radius-md: 16px;
+    --border-radius-lg: 24px;
+}
+
+body {
+    font-family: var(--primary-font);
+    color: #2b303a;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: var(--heading-font);
+    font-weight: 700;
+}
+
+/* Navbar Tweaks */
+.navbar {
+    backdrop-filter: blur(10px);
+    background-color: rgba(26, 30, 33, 0.95) !important;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.navbar-nav .nav-link {
+    font-family: var(--heading-font);
+    font-weight: 500;
+    color: rgba(255, 255, 255, 0.75);
+    transition: all 0.3s ease;
+}
+
+.navbar-nav .nav-link:hover {
+    color: var(--info-color);
+}
+
+/* Card Styling */
+.card {
+    border: none;
+    border-radius: var(--border-radius-md);
+    box-shadow: var(--card-shadow);
+    transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1), box-shadow 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--hover-shadow);
+}
+
+.card-header {
+    background-color: transparent;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+    padding: 1.5rem 1.5rem 1rem 1.5rem;
+}
+
+/* Table Styling */
+.table-responsive {
+    border-radius: var(--border-radius-md);
+    overflow: hidden;
+    box-shadow: var(--card-shadow);
+    background-color: #ffffff;
+}
+
+.table {
+    margin-bottom: 0;
+}
+
+.table th {
+    font-family: var(--heading-font);
+    font-weight: 600;
+    background-color: #f1f3f5;
+    color: #495057;
+    border-bottom: none;
+    padding: 1.25rem 1.5rem;
+    text-transform: uppercase;
+    font-size: 0.8rem;
+    letter-spacing: 0.5px;
+}
+
+.table td {
+    padding: 1.25rem 1.5rem;
+    vertical-align: middle;
+    border-bottom: 1px solid #f1f3f5;
+}
+
+/* Profile Image Thumbnails */
+.avatar-thumb {
+    width: 48px;
+    height: 48px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 2px solid #ffffff;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.avatar-large {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 4px solid #ffffff;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+/* Custom Alert Animations */
+.alert {
+    animation: slideInDown 0.4s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+}
+
+@keyframes slideInDown {
+    from {
+        transform: translateY(-20px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+/* Button & Form Focus Effects */
+.form-control:focus, .form-select:focus {
+    border-color: #0dcaf0;
+    box-shadow: 0 0 0 0.25rem rgba(13, 202, 240, 0.18);
+}
+
+.btn {
+    border-radius: var(--border-radius-sm);
+    font-weight: 500;
+    transition: all 0.3s ease;
+}
+
+.btn-info {
+    background-color: var(--info-color);
+    border-color: var(--info-color);
+}
+
+.btn-info:hover {
+    background-color: #0baccc;
+    border-color: #0baccc;
+}
+
+.btn-shadow {
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+}
+
+/* Summernote customization */
+.note-editor.note-frame {
+    border: 1px solid #dee2e6;
+    border-radius: var(--border-radius-sm);
+    overflow: hidden;
+}
+
+.note-editor.note-frame .note-statusbar {
+    background-color: #f8f9fa;
+}
+
+/* Custom classes for spacing & typography */
+.tracking-tight {
+    letter-spacing: -0.5px;
+}
